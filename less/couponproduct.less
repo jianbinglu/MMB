@@ -1,0 +1,114 @@
+@import 'common';
+.container {
+    .box {
+        background-color: #fff;
+        .header {
+            h3 {
+                text-align: center;
+                line-height: 100 / @base;
+                color:#fff;
+                font-size: 36/@base;
+                padding-left:100/@base;
+                a {
+                    width: 100/@base;
+                    height: 100/@base;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 50/@base;
+                    text-align: center;
+                    color: #fff;
+                    font-family: '宋体';
+                }
+                span {
+                    font-size: 36/@base;
+                }
+            }
+        }
+        .title {
+            height: 66/@base;
+            line-height: 66/@base;
+            text-align: center;
+        }
+        .product {
+            .item {
+                min-height: 234/@base;
+                padding:20/@base;
+                border-bottom: 1px solid #ccc;
+                .left {
+                    width: 210/@base;
+                    padding-right:20/@base;
+                    float: left;
+                    min-height: 160/@base;
+                    img {
+                        width: 190/@base;
+                        height: 152/@base;
+                    }
+                }
+                .right {
+                    overflow: hidden;
+                    p {
+                        color: #000;
+                    }
+                    P:nth-child(2) {
+                        font-weight: 700;
+                        margin-bottom: 45/@base;
+                    }
+                    P:nth-child(3) {
+                        color: @mColor;
+                    }
+                }
+            }
+        }
+        
+    }
+}   
+.model {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+    .close {
+        font-size: 50/@base;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding:50/@base;
+        color: #fff;
+    }
+    .imgs {
+        width: 60%;
+        height: 250/@base;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            height: 100%;
+        }
+        img:first-child {
+            opacity: 1;
+        }
+    }
+    .left,
+    .right {
+        padding:30/@base;
+        position: absolute;
+        font-family: '宋体';
+        font-size: 50/@base;
+        color: #fff;
+        top: 43%;
+    }
+    .left {
+        left: 10%;
+    }
+    .right {
+        right: 10%;
+    }
+}

@@ -1,0 +1,138 @@
+@import 'common';
+.container {
+    .box {
+        background-color: #eee;
+        .header {
+            h3 {
+                text-align: center;
+                line-height: 100 / @base;
+                color:#fff;
+                font-size: 36/@base;
+                padding-left:100/@base;
+                a {
+                    width: 100/@base;
+                    height: 100/@base;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 50/@base;
+                    text-align: center;
+                    color: #fff;
+                    font-family: '宋体';
+                }
+            }
+        }
+        .title {
+            background-color: #fff;
+            height: 80/@base;
+            line-height: 80/@base;
+            ul {
+                overflow: hidden;
+                li {
+                    float: left;
+                    padding: 0 25/@base;
+                    a {
+                        padding:20/@base 0;
+                        color: #000;
+                    }
+                    a.current {
+                        border-bottom: 2px solid #fc353a;
+                    }
+                }
+            }
+        }
+        .product {
+            .item {
+                margin-top:15/@base;
+                background-color: #fff;
+                height: 300/@base;
+                padding: 20/@base 10/@base;
+                img{
+                    width: 260/@base;
+                    height: 260/@base;
+                    float: left;
+                }
+                .right {
+                    overflow: hidden;
+                    padding-left:10/@base;
+                    p:first-child {
+                        color: #000;
+                    }
+                    p:nth-child(2) {
+                        color:#fa0c3f;
+                        font-size: 34/@base;
+                        i {
+                            font-size: 32/@base;
+                        }
+                        em {
+                            font-size: 32/@base;
+                            margin:0 3/@base;
+                        }
+                        del {
+                            margin-left:25/@base;
+                            color: #ccc;
+                            font-size: 28/@base;
+                        }
+                    } 
+                    .jindu {
+                        padding: 20/@base 0;
+                        b {
+                            color: #fa0c3f;
+                        }
+                        >div.bar {
+                            i {
+                                float: left;
+                                width: 165/@base;
+                                height: 30/@base;
+                                background-color: #ffb7b7;
+                                border: 1px solid #fa0c3f;
+                                border-radius: 15/@base;
+                                margin-right:30/@base;
+                                text-align: center;
+                                overflow: hidden;
+                                position: relative;
+                                em {
+                                    display: block;
+                                    height: 100%;
+                                    background-color: #fa0c3f;
+                                    position: relative;
+                                }
+                                span {
+                                    position: absolute;
+                                    z-index: 999;
+                                    top: 0;
+                                    left: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+                    p:last-child {
+                        height: 90/@base;
+                        line-height:90/@base; 
+                        a:first-child {
+                            padding:15/@base;
+                            border: 1px dotted #fa0c3f;
+                            color: #fa0c3f;
+                            border-radius: 0 5/@base;
+                        }
+                        a:last-child {
+                            color: #fff;
+                            float: right;
+                            width: 118/@base;
+                            height: 55/@base;
+                            line-height: 55/@base;
+                            text-align: center;
+                            margin-top:20/@base;
+                            background-color: #fa0c3f;
+                            border-radius: 5/@base;
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}

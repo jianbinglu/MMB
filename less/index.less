@@ -1,0 +1,73 @@
+@import 'common';
+// 导航
+.nav {
+    padding: 10 / @base 0;
+    margin-top:20/@base;
+    background-color: #fff;
+    ul {
+        margin-top:20 / @base;
+        li {
+            float: left;
+            width: 25%;
+            margin-bottom: 35 / @base;
+            a {
+                width: 100%;
+                display: block;
+                img {
+                    width: 106 / @base;
+                    height: 106 / @base;
+                    margin: 0 auto;
+                    margin-bottom: 10 / @base;
+                }
+                p{
+                    text-align: center;
+                    font-size: 24 / @base;
+                    color: #000;
+                }
+            }
+        }
+        li:nth-last-child(-n+4){
+            display:none;
+        }
+    }
+}
+// 底部
+.more {
+    padding:20/@base 20/@base 0;
+    background-color: #fff;
+    a {
+        display: block;
+        width: 100%;
+        height: 60 / @base;
+        line-height: 60 / @base;
+        color: #000;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5/@base;
+        span {
+            font-family: '宋体';
+        }
+    }
+}
+.foot_title {
+    height: 70 / @base;
+    line-height: 70 / @base;
+    padding: 0 20 / @base;
+    margin-top:20/@base;
+    background-image: linear-gradient(to right,#ffaf47,#ff9000);
+    span {
+        color:#fff;
+        font-size: 32 / @base;
+    }
+    a {
+        margin-top: 15 / @base;
+        i {
+            width: 40 / @base;
+            height: 40 / @base;
+            display: block;
+            background: url('../images/more.png') no-repeat center;
+            background-size: 100%;
+        }
+    }
+}
+// _____________________________

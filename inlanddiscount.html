@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/inlanddiscount.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--  -->
+        <div class="box">
+            <div class="header">
+                <div class="download"></div>
+                <h3><a href="javascript:history.back();"> < </a>国内折扣</h3>
+            </div>
+            <!--  -->
+            <div class="product">
+                    <ul class="clearfix">
+                        
+                    </ul>
+                </div>
+     
+            <div class="foot-nav clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#"><i></i>返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a>手机App下载 </a>
+                    <a> 慢慢买手机版 </a>
+                    <a> --掌上比价平台 </a>
+                </p>
+                <p><a href="#">m.manmanbuy.com</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/flexible.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/inlanddiscount.js"></script>
+    <script type="text/html" id="itemTemp">
+        {{each result v i}}
+            <li>
+                <a href="inlan.html?id={{v.productId}}">
+                    <div class="img">
+                        {{@v.productImg}}
+                    </div>
+                    <p class="txt-cut">{{v.productName}}</p>
+                    <p>{{v.productPrice}}</p>
+                    <p>
+                        <span>{{v.productFrom}} | </span>
+                        <span>{{v.productTime}}</span>
+                    </p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

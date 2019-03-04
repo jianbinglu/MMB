@@ -1,0 +1,54 @@
+@import 'common';
+.container {
+    .box {
+        // background-color: #fff;
+        .header {
+            h3 {
+                text-align: center;
+                line-height: 100 / @base;
+                color:#fff;
+                font-size: 36/@base;    padding-left:100/@base;
+                a {
+                    width: 100/@base;
+                    height: 100/@base;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 50/@base;
+                    text-align: center;
+                    color: #fff;
+                    font-family: '宋体';
+                }
+            }
+        }
+        .product {
+            ul {
+                margin-bottom: 30/@base;
+                margin-top: 30/@base;
+                li {
+                    height: 150/@base;
+                    float: left;
+                    width: 32%;
+                    border: 1px solid #ccc;
+                    margin-left:8/@base;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        img {
+                            width: 60%;
+                            height: 60%;
+                            margin:0 auto;
+                        }
+                    }
+                }
+                li:nth-child(4n) {
+                    margin-top:8/@base;
+                }
+                
+            }
+        }
+        
+    }
+}   

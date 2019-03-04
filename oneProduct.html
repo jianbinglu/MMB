@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/oneProduct.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--  -->
+        <div class="box">
+            <div class="header">
+                <div class="logo"></div>
+                <div class="download"></div>
+            </div>
+            <!--  -->
+            <div class="search">
+                <input type="text" placeholder="请输入您要比价的商品">
+                <button>搜索</button>
+            </div>
+            <!--  -->
+            <div class="product">
+                <div class="title clearfix">
+                    <div class="fl">
+                        <a href="index.html">首页 ></a>
+                        <a href="javascript:history.back();">全部分类 ></a>
+                        <a href="#"></a>
+                    </div>
+                    <div class="fr">
+                        <button>筛选</button>
+                    </div>
+                </div>
+                <div class="content">
+                    <!--刨个坑  -->
+                    <div class="banner">
+                        <p></p>
+                        <div class="img">
+                        </div>
+                        <a href="#">收藏</a>
+                    </div>
+                    <div class="snav clearfix">
+                        <a href="#">比价购买</a>
+                        <a href="#">产品参数</a>
+                        <a href="#">评价(2322)</a>
+                    </div>
+                    <div class="mode">
+                    </div>
+                    <div class="info">
+                        *实际价格以各网站列出的实际价格为准,我们提供的价格可能有数小时至数日的延迟。
+                    </div>
+                    <div class="comment">
+                        <div class="top">网友评论</div>
+                        <div class="cont">
+                        
+                        </div>
+                    </div>
+                    <div class="more">
+                        <p>查看更多评价</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-nav clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#"><i></i>返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a>手机App下载 </a>
+                    <a> 慢慢买手机版 </a>
+                    <a> --掌上比价平台 </a>
+                </p>
+                <p><a href="#">m.manmanbuy.com</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/flexible.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/oneProduct.js"></script>
+    <script type="text/html" id="useTemp">
+        {{each result v i }}
+        <div class="users">
+                <div class="shang">
+                    <p class="clearfix">
+                        <span class="fl">{{v.comName}}</span>
+                        <span class="fr">{{v.comTime}}</span>
+                    </p>
+                    <p>{{v.comFrom}}</p>
+                </div>
+                <div class="xia">
+                    <p>{{v.comContent}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+</body>
+
+</html>

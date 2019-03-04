@@ -1,0 +1,107 @@
+@import 'common';
+.container .box .product .content {
+    .banner {
+        height: 554 / @base;
+        position: relative;
+        background-color: #fff;
+        padding: 40 / @base;
+        p {
+            text-align: center;
+            color: #000;
+        }
+        img {
+            width: 60%;
+            height: 60%;
+            margin: 0 auto;
+        }
+        a {
+            width: 80 / @base;
+            height: 80 / @base;
+            background-color: #96d701;
+            color: #fff;
+            position: absolute;
+            bottom: 80 / @base;
+            right: 80 / @base;
+            text-align: center;
+            line-height: 80 / @base;
+            border-radius: 50%;
+        }
+    }
+    .snav {
+        height: 66/ @base;
+        border-top: 1px solid #b0330b;
+        border-bottom: 1px solid #b0330b;
+        line-height: 66/ @base;
+        a {
+            width: 33.3333%;
+            color: #fff;
+            text-align: center;
+            height: 100%;
+            display: block;
+            float: left;
+            background-color: #ffca3a;
+            border-left: 1px solid #b0330b;
+        }
+        a:nth-child(1) {
+            border-left: none;
+            background-color: #ffa127;
+        }
+    }
+    .mode {
+        height: 90 / @base;
+        line-height: 90 / @base;
+        padding: 0 10/@base;
+        border-bottom: 1px solid #ccc;
+        table {
+            tr {
+                td:nth-child(3) {
+                    color:red;
+                }
+            }
+            img {
+                width: 30 / @base;
+                height: 30 / @base;
+                margin-top:30 / @base;
+            }
+           
+        }
+    }
+    .info {
+        height: 115/ @base;
+        padding: 20 / @base;
+        border-bottom: 5px solid #ccc;
+    }
+    .comment {
+        margin-top:1 / @base;
+        .top {
+            background-color: #ccc;
+            text-align: center;
+            height: 65 / @base;
+            line-height: 65 / @base;
+        }
+        .cont {
+            .users {
+                border-bottom: 1px solid #ccc;
+                padding: 30/@base 20/@base 5/@base 20/@base;
+                .shang {
+                    margin-bottom: 20 / @base;
+                    p:last-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .more {
+        padding:35/@base 10/@base 0;
+        p {
+            height: 60/@base;
+            border-radius: 10 /@base;
+            background-color: #ccc;
+            border-bottom: 1px solid #666;
+            text-align: center;
+            line-height: 60/@base;
+        }
+    }
+
+}

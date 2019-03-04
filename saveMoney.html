@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/saveMoney.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--  -->
+        <div class="box">
+            <div class="header">
+                <div class="download"></div>
+                <h3><a href="javascript:history.back();"> < </a>国内折扣</h3>
+            </div>
+            <!--  -->
+            <div class="product">
+                <div class="content">
+
+                </div>
+            </div>
+            <!-- _______ -->
+            <div class="comment">
+
+            </div>
+            <div class="foot-nav clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#"><i></i>返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a>手机App下载 </a>
+                    <a> 慢慢买手机版 </a>
+                    <a> --掌上比价平台 </a>
+                </p>
+                <p><a href="#">m.manmanbuy.com</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/flexible.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/saveMoney.js"></script>
+    <script type="text/html" id="itemTemp">
+        {{if result.length === 0}}
+            <p style="text-align:center; margin-top:50px">没有折扣详情...</p>
+        {{else}}
+        {{each result v i}}
+            <div class="titl">
+                <h3>{{v.productName}}</h3>
+                <p>
+                    <span>{{v.productFrom}}</span>
+                    <span>{{v.productTime}}</span>
+                    <span>{{v.productTips}}</span>
+                </p>
+            </div>
+            <div class="con">
+                {{@v.productImgSm}}
+                <p>{{v.productInfo2}}</p>
+            </div>
+            <div class="img">
+                {{@v.productImg2}}
+            </div>
+            <div class="various">
+                {{@v.productCity}}
+            </div>
+            <div class="goBuy">
+                <p>前往购买</p>
+            </div>
+            <div class="erweima">
+                <img src="./images/mmbweixin2.png" alt="">
+            </div>
+        {{/each}}
+        {{/if}}
+    </script>
+    <script type="text/html" id="commentTemp">
+        {{each result v i}}
+            {{@v.productComment}}
+        {{/each}}
+    </script>
+</body>
+
+</html>

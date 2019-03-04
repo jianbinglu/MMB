@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/brand.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--  -->
+        <div class="box">
+            <div class="header">
+                <div class="logo"></div>
+                <div class="download"></div>
+            </div>
+            <!--  -->
+            <div class="search">
+                <input type="text" placeholder="请输入您要比价的商品">
+                <button>搜索</button>
+            </div>
+            <div class="product">
+                <div class="title clearfix">
+                    <div class="fl">
+                        <a href="index.html">首页 ></a>
+                        <a href="./brandTitle.html">全部分类 ></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <!--  -->
+            <div class="category">
+                <div class="title">
+                    <p><span></span><span>哪个牌子好?</span></p>
+                </div>
+                <ul class="bigUl">
+                    <!-- 刨个坑 -->
+                </ul>
+                <div class="title">
+                    <p><span></span><span>产品销量排行</span></p>
+                </div>
+                <div class="content">
+
+                </div>
+                <div class="title">
+                    <p><span></span><span>最新评论</span></p>
+                </div>
+                <div class="discuss">
+
+                </div>
+            </div>
+            <div class="foot-nav clearfix">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#"><i></i>返回顶部</a>
+            </div>
+            <div class="footer">
+                <p>
+                    <a>手机App下载 </a>
+                    <a> 慢慢买手机版 </a>
+                    <a> --掌上比价平台 </a>
+                </p>
+                <p><a href="#">m.manmanbuy.com</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/flexible.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./lib/IScroll/iscroll.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/brand.js"></script>
+    <!-- cateTemp -->
+    <script type="text/html" id="cateTemp">
+        {{each result v i}}
+            <li>
+                <a href="list.html?{{v.brandName}}={{v.categoryId}}">
+                    <i class=fl>{{i+1}}</i>
+                    <i class="fr"> > </i>
+                    <p class="brandName">{{v.brandName}}</p>
+                    <p class="brandInfo">{{v.brandInfo}}</p>
+                </a>
+            </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="itemTemp">
+        {{if result.length === 0}}
+            <p style="margin: 50px  0;text-align:center">没有数据了.....</p>
+            {{else}}
+        {{each result v i}}
+            <div class="item">
+                <a href="javascript:;" data-id="{{v.productId}}">
+                    <div class="left">
+                        {{@v.productImg}}
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <p>{{v.productName}}</p>
+                            <p class="price">{{v.productPrice}}</p>
+                        </div>
+                        <div class="bottom">
+                            <span>{{v.productQuote}} </span>
+                            <span> | {{v.productCom}}</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+        {{/if}}
+    </script>
+</body>
+
+</html>
